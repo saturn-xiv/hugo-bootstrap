@@ -4,7 +4,7 @@
 
 ```bash
 $ git submodule add https://github.com/saturn-xiv/hugo-bootstrap.git themes/bootstrap
-$ cp themes/bootstrap/package.json themes/bootstrap/exampleSite/config.toml
+$ cp themes/bootstrap/package.json themes/bootstrap/exampleSite/config.toml themes/bootstrap/.gitignore ./
 $ npm install
 ```
 
