@@ -13,6 +13,22 @@ $ hugo server -D
 $ hugo -D --minify
 ```
 
+## Deployment by rsync
+
+```bash
+$ rsync -avz --delete public/ deploy@www.examples.com:/var/www/www.examples.com/htdocs
+```
+
+## Nginx
+
+```nginx
+server {
+    server_name www.examples.org;
+    root /var/www/www.examples.org/htdocs;
+    index index.html;
+}
+```
+
 ## Documents
 
 - [Bootstrap](https://getbootstrap.com/)
