@@ -16,10 +16,14 @@
     </blockquote>
   </div>
 
+  {{if .Params.toc}}
   <div class="col-md-3">
-    {{- partial "toc.html" . -}}
+    <aside>
+      {{.TableOfContents}}
+    </aside>
   </div>
-  <div class="col-md-9">
+  {{end}}
+  <div class="col-md-{{if .Params.toc}}9{{else}}12{{end}}">
     {{ .Content }}
   </div>
   <div class="col-md-12">
