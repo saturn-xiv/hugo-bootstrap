@@ -1,28 +1,38 @@
 {{ define "main" }}
 
 <div class="row">
-    <div class="col-md-12">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Date.Format .Site.Params.timestamp }} by {{.Params.author}}</p>
-    </div>
+  <div class="col-md-12">
+    <h2>{{ .Title }}</h2>
+    <blockquote class="blockquote text-right">
+      <p class="mb-0">
+        {{ .Date.Format .Site.Params.timestamp }}
+        <br />
+        {{ i18n "WordCount" .WordCount }}
+        , {{ i18n "ReadingTime" .ReadingTime }}.
+      </p>
+      <footer class="blockquote-footer">
+        <cite>{{ i18n "SinglePageBy" .Params.author}}</cite>
+      </footer>
+    </blockquote>
+  </div>
 
-    <div class="col-md-3">
-        {{- partial "toc.html" . -}}
-    </div>
-    <div class="col-md-9">
-        {{ .Content }}
-    </div>
-    <div class="col-md-12">
-        {{if .PrevPage}}
-        <a href="{{ .PrevPage.Permalink }}">
-            <i class="far fa-arrow-alt-circle-left fa-3x"></i>
-        </a>
-        {{end}} {{if .NextPage}}
-        <a class="float-right" href="{{ .NextPage.Permalink }}">
-            <i class="far fa-arrow-alt-circle-right fa-3x"></i>
-        </a>
-        {{end}}
-    </div>
+  <div class="col-md-3">
+    {{- partial "toc.html" . -}}
+  </div>
+  <div class="col-md-9">
+    {{ .Content }}
+  </div>
+  <div class="col-md-12">
+    {{if .PrevPage}}
+    <a href="{{ .PrevPage.Permalink }}">
+      <i class="far fa-arrow-alt-circle-left fa-3x"></i>
+    </a>
+    {{end}} {{if .NextPage}}
+    <a class="float-right" href="{{ .NextPage.Permalink }}">
+      <i class="far fa-arrow-alt-circle-right fa-3x"></i>
+    </a>
+    {{end}}
+  </div>
 </div>
 
 {{ end }}

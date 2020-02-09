@@ -8,7 +8,14 @@ other = "Search"
 other = "Sitch language"
 
 [SinglePageBy]
-other = "by"
+other = "By {{.Count}}"
+
+[ReadingTime]
+one = "One minute to read"
+other = "{{.Count}} minutes to read"
+
+[WordCount]
+other = "{{.Count}} words total"
 
 [ListPageMore]
 other = "View details"

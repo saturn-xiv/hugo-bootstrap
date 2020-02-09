@@ -8,7 +8,13 @@ other = "搜索"
 other = "切换语言"
 
 [SinglePageBy]
-other = "作者:"
+other = "作者: {{.Count}}"
+
+[ReadingTime]
+other = "需{{.Count}}分钟阅读"
+
+[WordCount]
+other = "共{{.Count}}字"
 
 [ListPageMore]
 other = "详细信息"
