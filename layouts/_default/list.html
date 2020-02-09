@@ -4,7 +4,7 @@
     {{ range .Data.Pages }}
     <div class="col-md-4">
         <h2>{{ .Title }}</h2>
-        <p>{{ .Summary }}</p>
+        <p>{{ substr .Summary 0 200 }}</p>
         <p>
             <a class="btn btn-secondary" href="{{ .Permalink }}" role="button">
                 {{i18n "ListPageMore"}} &raquo;
