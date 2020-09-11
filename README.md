@@ -8,7 +8,7 @@ $ cp themes/bootstrap/package.json themes/bootstrap/exampleSite/config.toml them
 # install third dependicies
 $ npm install
 # run server
-$ hugo server -D
+$ hugo server -D --disableFastRender
 # build site
 $ hugo -D --minify
 ```
